@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
+//go:generate  stringer -type=ComponentStatus
 type ComponentStatus int
 
 /*
@@ -13,6 +14,7 @@ type ComponentStatus int
 
 const (
 	Operational ComponentStatus = iota
+	UnderMaintenance
 	DegradedPerformance
 	PartialOutage
 	MajorOutage
